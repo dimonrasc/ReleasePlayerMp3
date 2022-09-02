@@ -11,22 +11,30 @@ struct ContentView: View {
     
     @State private var speed = 50.0
     @State private var isEditing = false
+    @State private var pathFolder = ""
+    @State private var pathFile = ""
+    @State private var playAudio = true
     
     var body: some View {
+        NavigationView{
         VStack{
-            Spacer()
             Text("Title Albom")
                 .font(.system(size: 30, weight: .light, design: .serif))
                 .italic()
                 .lineLimit(1)
             Spacer()
-            Image("cyrcleImageAlbom")
-                .frame(width: 200, height: 200)
-                .background(Color.blue)
+            Image("NoName")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Circle())
+                .overlay{
+                    Circle().stroke(.gray, lineWidth: 4)
+                }
+                .shadow(radius: 7)
             Spacer()
             Slider(value: $speed,
                    in: 0...100,
-                   step: 5){
+                   step: 1){
                 Text("Speed")
             } minimumValueLabel: {
                 Text("0")
@@ -39,11 +47,16 @@ struct ContentView: View {
                 .foregroundColor(isEditing ? .red : .blue)
             Spacer()
             HStack{
-                Button{
-                    print("pressed play/pause")
-                } label: {
-                    Text("Play/Pause")
-                }
+                Button(action: {                    
+                    if playAudio{
+                        playSound(sound: "01. Money", type: "mp3")
+                    }else{
+                        stopSound()
+                    }
+                    playAudio.toggle()
+                }, label: {
+                    Text(playAudio ? "Play" : "Stop")
+                })
                 Spacer()
                 Button{
                     print("pressed next track")
@@ -51,15 +64,22 @@ struct ContentView: View {
                     Text("Next track")
                 }
                 Spacer()
+                NavigationLink{
+                    ListFolder()
+                } label: {
+                    Text("Folders")
+                }
+                /*
                 Button{
                     print("pressed folders")
                 } label: {
                     Text("Folders")
-                }
+                }*/
             }
             .padding()
         }
         .padding()
+        }
     }
 }
 
