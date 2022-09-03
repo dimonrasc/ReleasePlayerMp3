@@ -10,6 +10,7 @@ import SwiftUI
 struct ListFolder: View {
     
     @State var files = getFiles()
+    @State var folders = getFolders()
 
     var body: some View {
         VStack{
@@ -22,19 +23,44 @@ struct ListFolder: View {
                 .navigationTitle("DocumentFolder")
                 Spacer()
             }
-            ForEach(0..<files.count, id: \.self) { item in
-                HStack{
-                    Text(files[item])
-                    Spacer()
+            ScrollView{
+                ForEach(0..<files.count, id: \.self) { item in
+                    HStack{
+                        Image(systemName: "play")
+                            .padding()
+                            .font(.system(size: 20))
+                            .foregroundColor(.blue)
+                        Button(){
+                            print("Taped files: " , files[item])
+                        } label: {
+                            Text(files[item])
+                        }
+                        
+                        Spacer()
+                    }
                 }
-                
+                ForEach(0..<folders.count, id: \.self) { item in
+                    HStack{
+                        Image(systemName: "folder")
+                            .padding()
+                            .font(.system(size: 20))
+                            .foregroundColor(.blue)
+                        Button(){
+                            print("Taped folder: " , folders[item])
+                        } label: {
+                            Text(folders[item])
+                        }
+                        Spacer()
+                    }
+                }
             }
+            
             Spacer()
         }
         .padding()
     }
 }
-
+/*
 func getFiles() -> Array<String> {
     
     var files: [String] = []
@@ -53,7 +79,7 @@ func getFiles() -> Array<String> {
     files.sort()
     return files
 }
-
+*/
 struct ListFolder_Previews: PreviewProvider {
     static var previews: some View {
         ListFolder()

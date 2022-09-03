@@ -11,6 +11,7 @@
 		9163A40828C1279C000AD5FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9163A40728C1279C000AD5FF /* ContentView.swift */; };
 		9163A40A28C1279D000AD5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9163A40928C1279D000AD5FF /* Assets.xcassets */; };
 		9163A40D28C1279D000AD5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9163A40C28C1279D000AD5FF /* Preview Assets.xcassets */; };
+		9166F5E428C343BD00175D36 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166F5E328C343BD00175D36 /* Files.swift */; };
 		91811FBD28C2607300F3EEA6 /* ListFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91811FBC28C2607300F3EEA6 /* ListFolder.swift */; };
 		91811FC128C2704100F3EEA6 /* 01. Money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91811FC028C2704100F3EEA6 /* 01. Money.mp3 */; };
 		91811FC328C2705F00F3EEA6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */; };
@@ -22,6 +23,7 @@
 		9163A40728C1279C000AD5FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9163A40928C1279D000AD5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9163A40C28C1279D000AD5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9166F5E328C343BD00175D36 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		91811FBC28C2607300F3EEA6 /* ListFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFolder.swift; sourceTree = "<group>"; };
 		91811FC028C2704100F3EEA6 /* 01. Money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01. Money.mp3"; path = "../../../Downloads/MARUV - 2021 - No Name/01. Money.mp3"; sourceTree = "<group>"; };
 		91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
@@ -58,12 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				9163A40528C1279C000AD5FF /* ReleasePlayerMp3App.swift */,
-				9163A40728C1279C000AD5FF /* ContentView.swift */,
-				91811FBC28C2607300F3EEA6 /* ListFolder.swift */,
+				9166F5E228C3433700175D36 /* Controler */,
+				9166F5E128C3412D00175D36 /* View */,
 				91811FC028C2704100F3EEA6 /* 01. Money.mp3 */,
 				9163A40928C1279D000AD5FF /* Assets.xcassets */,
 				9163A40B28C1279D000AD5FF /* Preview Content */,
-				91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */,
 			);
 			path = ReleasePlayerMp3;
 			sourceTree = "<group>";
@@ -74,6 +75,24 @@
 				9163A40C28C1279D000AD5FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9166F5E128C3412D00175D36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9163A40728C1279C000AD5FF /* ContentView.swift */,
+				91811FBC28C2607300F3EEA6 /* ListFolder.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9166F5E228C3433700175D36 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */,
+				9166F5E328C343BD00175D36 /* Files.swift */,
+			);
+			path = Controler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +168,7 @@
 			files = (
 				91811FBD28C2607300F3EEA6 /* ListFolder.swift in Sources */,
 				9163A40828C1279C000AD5FF /* ContentView.swift in Sources */,
+				9166F5E428C343BD00175D36 /* Files.swift in Sources */,
 				9163A40628C1279C000AD5FF /* ReleasePlayerMp3App.swift in Sources */,
 				91811FC328C2705F00F3EEA6 /* AudioPlayer.swift in Sources */,
 			);
@@ -287,6 +307,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +337,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
