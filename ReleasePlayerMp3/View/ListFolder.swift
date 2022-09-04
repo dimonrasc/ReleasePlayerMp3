@@ -23,6 +23,7 @@ struct ListFolder: View {
                 .navigationTitle("DocumentFolder")
                 Spacer()
             }
+            /*
             ScrollView{
                 ForEach(0..<files.count, id: \.self) { item in
                     HStack{
@@ -54,7 +55,36 @@ struct ListFolder: View {
                     }
                 }
             }
-            
+             */
+            List{
+                ForEach(0..<folders.count, id: \.self) { item in
+                    HStack{
+                        Image(systemName: "folder")
+                            .font(.system(size: 20))
+                            .foregroundColor(.blue)
+                        Button(){
+                            print("Taped folder: " , folders[item])
+                        } label: {
+                            Text(folders[item])
+                        }
+                        Spacer()
+                    }
+            }
+                ForEach(0..<files.count, id: \.self) { item in
+                    HStack{
+                        Image(systemName: "music.note")
+                            .padding()
+                            .font(.system(size: 20))
+                            .foregroundColor(.blue)
+                        Button(){
+                            print("Taped files: " , files[item])
+                        } label: {
+                            Text(files[item])
+                        }
+                        
+                        Spacer()
+                    }
+                }
             Spacer()
         }
         .padding()
@@ -83,5 +113,6 @@ func getFiles() -> Array<String> {
 struct ListFolder_Previews: PreviewProvider {
     static var previews: some View {
         ListFolder()
+        }
     }
 }
