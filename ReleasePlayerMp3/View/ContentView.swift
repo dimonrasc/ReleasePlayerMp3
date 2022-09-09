@@ -14,6 +14,8 @@ struct ContentView: View {
     @State private var pathFolder = ""
     @State private var pathFile = ""
     @State private var playAudio = true
+    @State private var selectedFiles = ""
+    @State private var pathDirectory = getDocumentsDirectory()
     
     var body: some View {
         NavigationView{
@@ -47,9 +49,10 @@ struct ContentView: View {
                 .foregroundColor(isEditing ? .red : .blue)
             Spacer()
             HStack{
-                Button(action: {                    
+                Button(action: {
+                    print("play file: \(pathDirectory)/\(selectedFiles)")
                     if playAudio{
-                        playSound(sound: "01. Money", type: "mp3")
+                        playSound(sound: "file:///Users/huf/Library/Developer/CoreSimulator/Devices/DB95F3EB-A8C0-4539-99D5-BB7226376029/data/Containers/Data/Application/5E99D58A-30A9-4B1E-919D-948A0208C872/Documents/02.%20Ne%20zabudu.mp3", type: "mp3")
                     }else{
                         stopSound()
                     }
@@ -65,7 +68,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 NavigationLink{
-                    ListFolder()
+                    ListFolder(selectedFiles: $selectedFiles)
                 } label: {
                     Text("Folders")
                 }

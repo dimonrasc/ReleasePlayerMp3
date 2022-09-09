@@ -13,8 +13,8 @@
 		9163A40D28C1279D000AD5FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9163A40C28C1279D000AD5FF /* Preview Assets.xcassets */; };
 		9166F5E428C343BD00175D36 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9166F5E328C343BD00175D36 /* Files.swift */; };
 		91811FBD28C2607300F3EEA6 /* ListFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91811FBC28C2607300F3EEA6 /* ListFolder.swift */; };
-		91811FC128C2704100F3EEA6 /* 01. Money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91811FC028C2704100F3EEA6 /* 01. Money.mp3 */; };
 		91811FC328C2705F00F3EEA6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */; };
+		91C549FA28CBC1F300113B21 /* 01. Money.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91C549F928CBC1F300113B21 /* 01. Money.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,8 +25,9 @@
 		9163A40C28C1279D000AD5FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9166F5E328C343BD00175D36 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		91811FBC28C2607300F3EEA6 /* ListFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFolder.swift; sourceTree = "<group>"; };
-		91811FC028C2704100F3EEA6 /* 01. Money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "01. Money.mp3"; path = "../../../Downloads/MARUV - 2021 - No Name/01. Money.mp3"; sourceTree = "<group>"; };
 		91811FC228C2705F00F3EEA6 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		91B8854D28CBD2FD00948920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		91C549F928CBC1F300113B21 /* 01. Money.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "01. Money.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +60,12 @@
 		9163A40428C1279C000AD5FF /* ReleasePlayerMp3 */ = {
 			isa = PBXGroup;
 			children = (
+				91B8854D28CBD2FD00948920 /* Info.plist */,
 				9163A40528C1279C000AD5FF /* ReleasePlayerMp3App.swift */,
 				9166F5E228C3433700175D36 /* Controler */,
 				9166F5E128C3412D00175D36 /* View */,
-				91811FC028C2704100F3EEA6 /* 01. Money.mp3 */,
 				9163A40928C1279D000AD5FF /* Assets.xcassets */,
+				91C549F928CBC1F300113B21 /* 01. Money.mp3 */,
 				9163A40B28C1279D000AD5FF /* Preview Content */,
 			);
 			path = ReleasePlayerMp3;
@@ -153,7 +155,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91811FC128C2704100F3EEA6 /* 01. Money.mp3 in Resources */,
+				91C549FA28CBC1F300113B21 /* 01. Money.mp3 in Resources */,
 				9163A40D28C1279D000AD5FF /* Preview Assets.xcassets in Resources */,
 				9163A40A28C1279D000AD5FF /* Assets.xcassets in Resources */,
 			);
@@ -302,6 +304,7 @@
 				DEVELOPMENT_TEAM = JNWUR8US8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReleasePlayerMp3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +335,7 @@
 				DEVELOPMENT_TEAM = JNWUR8US8F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ReleasePlayerMp3/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

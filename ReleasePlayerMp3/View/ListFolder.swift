@@ -11,6 +11,7 @@ struct ListFolder: View {
     
     @State var files = getFiles()
     @State var folders = getFolders()
+    @Binding var selectedFiles: String
 
     var body: some View {
         VStack{
@@ -63,7 +64,7 @@ struct ListFolder: View {
                             .font(.system(size: 20))
                             .foregroundColor(.blue)
                         Button(){
-                            print("Taped folder: " , folders[item])
+                            //print("Taped folder: " , folders[item])
                         } label: {
                             Text(folders[item])
                         }
@@ -77,7 +78,8 @@ struct ListFolder: View {
                             .font(.system(size: 20))
                             .foregroundColor(.blue)
                         Button(){
-                            print("Taped files: " , files[item])
+                            selectedFiles = files[item]
+                            //print("Taped files: " , files[item])
                         } label: {
                             Text(files[item])
                         }
@@ -87,7 +89,7 @@ struct ListFolder: View {
                 }
             Spacer()
         }
-        .padding()
+        //.padding()
     }
 }
 /*
@@ -110,9 +112,10 @@ func getFiles() -> Array<String> {
     return files
 }
 */
-struct ListFolder_Previews: PreviewProvider {
-    static var previews: some View {
-        ListFolder()
-        }
-    }
+//struct ListFolder_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListFolder()
+//        }
+//    }
 }
+
