@@ -50,9 +50,9 @@ struct ContentView: View {
             Spacer()
             HStack{
                 Button(action: {
-                    print("play file: \(pathDirectory)/\(selectedFiles)")
+                    //print("play file: https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3")
                     if playAudio{
-                        playSound(sound: "file:///Users/huf/Library/Developer/CoreSimulator/Devices/DB95F3EB-A8C0-4539-99D5-BB7226376029/data/Containers/Data/Application/5E99D58A-30A9-4B1E-919D-948A0208C872/Documents/02.%20Ne%20zabudu.mp3", type: "mp3")
+                        playSound(sound: "/Users/huf/Library/Developer/CoreSimulator/Devices/DB95F3EB-A8C0-4539-99D5-BB7226376029/data/Containers/Bundle/Application/0D7151FC-DBA4-4486-8434-D452BF354BFD/ReleasePlayerMp3.app/01. Money.mp3", type: "mp3")
                     }else{
                         stopSound()
                     }

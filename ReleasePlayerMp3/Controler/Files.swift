@@ -45,6 +45,6 @@ import Foundation
 
 func getDocumentsDirectory() -> String{
     let documentsUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    print(documentsUrl)
+    //print(documentsUrl)
     return documentsUrl.path
 }
